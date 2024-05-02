@@ -1,0 +1,4 @@
+.customImage {
+    width: 500px;
+    clip-path: inset(10% 30% 0 40%)
+}
