@@ -1,0 +1,21 @@
+#content {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+body {
+    font-size: 22px;
+    font-family: DM Sans, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#logo {
+    width: 150px;
+    clip-path: 50%;
+}
+
+#hero-img {
+    width: 100%;
+}
+
