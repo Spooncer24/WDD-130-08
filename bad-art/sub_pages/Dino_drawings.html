@@ -1,50 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bad Art | Drawings</title>
-    <link rel="stylesheet" href="../styles/bad_art_page_2&3.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../styles/bad_art_page_2&3.css" />
+  </head>
+  <body>
     <div id="content">
-        <nav>
-          <header>
-            <a id="logo_link" href="../index.html">
-              <img id="logo" src="../images/BAD Art.png" alt="bad_art_logo" />
-            </a>
-            <a href="./Dino_drawings.html">Dino drawings</a>
-            <a href="./Misc_drawings.html">Misc drawings</a>
-          </header>
-          </nav>
+      <nav>
+        <header>
+          <a id="logo_link" href="../index.html">
+            <img id="logo" src="../images/BAD Art.png" alt="bad_art_logo" />
+          </a>
+          <a href="./Dino_drawings.html">Dino drawings</a>
+          <a href="./Misc_drawings.html">Misc drawings</a>
+        </header>
+      </nav>
 
-          <div id="location_1">
-            <img class="photo" src="../images/Dino eating loli.png" alt="Dino eating loli">
-            <p>
-                This is a picture of a dinosaur trying to eat a lolipop but his hands are to short.
-            </p>
-          </div>
+      <div id="location_1">
+        <!-- Trigger the Modal -->
+        <img
+          id="myImg"
+          src="../images/Dino eating loli.png"
+          alt="Loli_dino"
+          style="width: 100%; max-width: 300px"
+        />
 
-          <div id="location_2">
-            <img src="../images/Holder.png" alt="Holder img for now">
-            <p>
-                This is a holder image for now
-            </p>
-          </div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <!-- The Close Button -->
+          <span class="close">&times;</span>
 
-          <div id="location_3">
-            <img src="../images/Holder.png" alt="Holder img for now">
-            <p>
-                This is a holder image for now
-            </p>
-          </div>
+          <!-- Modal Content (The Image) -->
+          <img class="modal-content" id="img01" />
 
-          <footer>
-            <p>Bad Art &copy; 2024 - Spencer Hewitt</p>
-            <p><a href="../site-plan.html">Site Plan</a></p>
-            <p><a href="./Dino_drawings.html">Dino drawings</a></p>
-            <p><a href="./Misc_drawings.html">Misc drawings</a></p>
-          </footer>
+          <!-- Modal Caption (Image Text) -->
+          <div id="caption"></div>
+        </div>
+      </div>
+
+      <div id="location_2">
+        <img src="../images/Holder.png" alt="Holder img for now" />
+        <p>This is a holder image for now</p>
+      </div>
+
+      <div id="location_3">
+        <img src="../images/Holder.png" alt="Holder img for now" />
+        <p>This is a holder image for now</p>
+      </div>
+
+      <footer>
+        <p>Bad Art &copy; 2024 - Spencer Hewitt</p>
+        <p><a href="../site-plan.html">Site Plan</a></p>
+        <p><a href="./Dino_drawings.html">Dino drawings</a></p>
+        <p><a href="./Misc_drawings.html">Misc drawings</a></p>
+      </footer>
     </div>
-</body>
+
+    <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+      var img = document.getElementById("myImg");
+      var modalImg = document.getElementById("img01");
+      var captionText = document.getElementById("caption");
+      img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+      };
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+    </script>
+  </body>
 </html>
